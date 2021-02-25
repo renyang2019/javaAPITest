@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Test(failed)">
+    <parameter name="userName" value="renyang"/>
+    <parameter name="pwd" value="123456"/>
+    <classes>
+      <class name="NewTestForRenPactice">
+        <methods>
+          <include name="test_case_003"/>
+        </methods>
+      </class> <!-- NewTestForRenPactice -->
+      <class name="NewTestAPI">
+        <methods>
+          <include name="test_case_001" invocation-numbers="0 1 2"/>
+          <include name="test_case_002" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- NewTestAPI -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
